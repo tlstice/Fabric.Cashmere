@@ -1,4 +1,14 @@
-<hc-button-toggle-group>
-    <hc-button-toggle>One</hc-button-toggle>
-    <hc-button-toggle>Two</hc-button-toggle>
+<h4 class="example-header">Single Selection Button Group</h4>
+<hc-button-toggle-group buttonStyle="secondary">
+    <hc-button-toggle value="asc" checked="true">
+        <hc-icon fontSet="hc-icons" fontIcon="hci-sort-ascend"></hc-icon>
+    </hc-button-toggle>
+    <hc-button-toggle value="desc">
+        <hc-icon fontSet="hc-icons" fontIcon="hci-sort-descend"></hc-icon>
+    </hc-button-toggle>
+</hc-button-toggle-group>
+
+<h4>Multiple Selection Button Group (small size)</h4>
+<hc-button-toggle-group buttonStyle="primary" size="sm" multiple="true">
+    <hc-button-toggle *ngFor="let button of multiGroup" [value]="button.value" [checked]="button.checked">{{button.value}}</hc-button-toggle>
 </hc-button-toggle-group>

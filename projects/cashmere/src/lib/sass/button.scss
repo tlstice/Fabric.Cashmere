@@ -26,6 +26,10 @@ $btn-icon-sz: 18px;
         color: $white;
     }
 
+    &.hc-toggle-checked {
+        background-color: shade($color, $darken-pct * 2);
+    }
+
     &[disabled],
     &[disabled]:hover,
     &[disabled]:focus,

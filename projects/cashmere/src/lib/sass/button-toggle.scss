@@ -3,5 +3,53 @@
 @import './mixins';
 
 @mixin hc-button-toggle() {
-    display: flex;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    cursor: pointer;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    // Override the min-width setting for button styles
+    min-width: 0 !important;
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+
+    &:focus {
+        outline: none;
+        border-bottom: none;
+        box-shadow: 0 0 0 2px transparentize($primary-brand, 0.6);
+    }
+
+    &:active {
+        background-image: none;
+        outline: none;
+    }
+
+    // Remove Firefox's active state dotted outline b/c we have our own highlight
+    &::-moz-focus-inner {
+        border:0;
+    }
+}
+
+@mixin hc-button-toggle-secondary( $isLast ) {
+    color: $text;
+    @if ( $isLast ) {
+        border-right: 1.5px solid $gray-300;
+    } @else {
+        border-right: 0;
+    }
+}
+
+@mixin hc-button-toggle-first() {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+@mixin hc-button-toggle-last() {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 0;
 }
