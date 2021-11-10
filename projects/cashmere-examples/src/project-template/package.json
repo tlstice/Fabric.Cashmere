@@ -23,7 +23,7 @@
     "@ng-select/ng-select": "^6.1.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.5.4",
-    "zone.js": "~0.9.1",
+    "zone.js": "~0.11.4",
     "@healthcatalyst/cashmere": "*",
     "notosans-fontface": "^1.2.2",
     "font-awesome": "4.7.0",
